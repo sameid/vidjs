@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+  head
+    title Vid.js
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/css/airplop.css')
+    link(href='http://vjs.zencdn.net/5.5.3/video-js.css', rel='stylesheet')
+
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  body
+
+    div(class="container")
+
+      div(class="page-header")
+        h1
+          a(href="/") Vid.js
+        a(href='http://#{ip}:9091/transmission/web/', target="_blank" class="btn btn-default") Manage Torrents
+
+      div(class="row")
+        div(class="col-sm-12 filename")
+          h4
+            a(href='/videostream/'+videoIndex) #{file.name}
+
+          video#my-video.video-js(controls='', preload='auto',  poster='MY_VIDEO_POSTER.jpg', data-setup='{}')
+            source(src='/videostream/'+videoIndex, type='video/mp4')
+            p.vjs-no-js
+              To view this video please enable JavaScript, and consider upgrading to a web browser that
+              a(href='http://videojs.com/html5-video-support/', target='_blank') supports HTML5 video
+
+    script(src='http://vjs.zencdn.net/5.5.3/video.js')

@@ -1,15 +1,12 @@
 {
-  "name": "airplop",
+  "name": "vidjs",
   "version": "0.0.2",
-  "description": "Makes a temporary server to transfer files to wireless devices through their browsers.",
+  "description": "Serves video files over your local network.",
   "main": "airplop.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "preferGlobal": "true",
-  "bin": {
-    "airplop": "airplop.js"
-  },
   "engines": {
     "node": "*"
   },
@@ -18,21 +15,23 @@
     "transfer",
     "file"
   ],
-  "author": "zayaank",
+  "author": "sameid",
   "license": "MIT",
   "dependencies": {
     "bytes": "^1.0.0",
     "express": "^4.12.2",
     "ip": "^0.3.2",
-    "jade": "^1.9.2"
+    "jade": "^1.9.2",
+    "walk": "*",
+    "underscore": "*"
   },
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git@github.com:zayaankhatib/airplop.git"
+    "url": "https://github.com/sameid/vid.js.git"
   },
   "bugs": {
-    "url": "https://github.com/zayaankhatib/airplop/issues"
+    "url": "https://github.com/sameid/vid.js/issues"
   },
-  "homepage": "https://github.com/zayaankhatib/airplop"
+  "homepage": "https://github.com/sameid/vid.js"
 }
